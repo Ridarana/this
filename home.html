@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+<ion-item>
+<ion-label>Start Date</ion-label>
+<ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+</ion-item>
+<ion-item>
+<ion-label>Start Time</ion-label>
+<ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+</ion-item>
+<ion-item>
+<ion-label>Ends</ion-label>
+<ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+</ion-item>
+</ion-list>
+
+<ion-fab top right adge>
+<button ion-fab mini><ion-icon name="add"></ion-icon></button>
+<ion-fab-list>
+<button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+<button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+<button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+<button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+</ion-fab-list>
+</ion-fab>
+<ion-fab center middle>
+<button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
+<ion-fab-list side="top">
+<button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+</ion-fab-list>
+<ion-fab-list side="bottom">
+<button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+</ion-fab-list>
+<ion-fab-list side="left">
+<button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+</ion-fab-list>
+<ion-fab-list side="right">
+<button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+</ion-fab-list>
+</ion-fab>
+</ion-content>
