@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title> About</ion-title>
+  </ion-toolbar>
+    <ion-title>
+      Gestures
+    </ion-title>
+  
+</ion-header>
+
+<ion-content >
+<ion-card (tap)="tapEvent($event)">
+<ion-item>
+Tapped: {{tap}} times
+</ion-item>
+</ion-card>
+<ion-card (press)="pressEvent($event)">
+<ion-item>
+Press: {{press}} times
+</ion-item>
+</ion-card>
+<ion-card (swipe)="swipeEvent($event)">
+<ion-item>
+Swipe: {{swipe}} times
+</ion-item>
+</ion-card>
+<button ion-button block (click)="presentLoading()">Show Loading</button>
+ <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="primary">Skip</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Play?</h2>
+      <button ion-button large clear icon-right color="primary">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+</ion-content>
