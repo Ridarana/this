@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card-content>
+<ion-card>
+<ion-item> 
+<ion-avatar item-left>
+<img src="imgs/2.jpg"/>
+</ion-avatar>
+<h2>Rida Batool</h2>
+<p>March 10,2017</p>
+</ion-item>
+<img src="imgs/1.jpg"/>
+<ion-card-content>
+Wait a minute.Wait a minute.Doc...
+</ion-card-content>
+<ion-row>
+<ion-col>
+<button ion-button item-left clear small>
+<ion-icon name="thumbs-up"></ion-icon>
+<div>12 likes</div>
+</button>
+</ion-col>
+<ion-col>
+<button ion-button item-left clear small>
+<ion-icon name="text"></ion-icon>
+<div>22 comments</div>
+</button>
+</ion-col>
+<ion-col center text-center>
+<ion-note>9h ago
+</ion-note>
+</ion-col>
+</ion-row>
+</ion-card>
+</ion-card-content>
+<div text-center>  
+  <button ion-button only icon>
+<ion-icon name="home"color="danger"  [navPush]="aboutPage" ></ion-icon>
+</button> 
+</div>
+<ion-list>
+<button ion-item =" test"(click)="itemSelected(item)">
+</button>
+</ion-list>
+</ion-content>
